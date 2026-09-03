@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Bab 8 — Kebijakan Karhutla, Rezim &amp; Dampak</title>
+<title>Kebijakan Karhutla Indonesia</title>
 <style>
 :root{
   color-scheme: light;
@@ -46,8 +46,7 @@ main{max-width:1240px;margin:0 auto;padding:0 24px 70px}
 .stat .l{font-size:12px;color:var(--ink-2);margin-top:6px}
 section{margin-top:48px}
 .sh{padding-bottom:14px;border-bottom:1px solid var(--grid);margin-bottom:20px}
-.sh .num{display:inline-block;font-size:11px;font-weight:700;color:var(--fire);letter-spacing:.08em}
-.sh h2{margin:6px 0 8px;font-size:21px}
+.sh h2{margin:0 0 8px;font-size:21px}
 .sh p{margin:0;color:var(--ink-2);font-size:13.5px;max-width:920px}
 .card{background:var(--surface-1);border:1px solid var(--border);border-radius:10px;padding:22px 24px;margin-bottom:18px}
 /* timeline */
@@ -69,12 +68,13 @@ section{margin-top:48px}
 .legend{display:flex;gap:16px;flex-wrap:wrap;margin-top:14px;font-size:12.5px;color:var(--ink-2)}
 .legend i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:6px;vertical-align:-1px}
 /* matrix */
-.matrix-wrap{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-@media(max-width:820px){.matrix-wrap{grid-template-columns:1fr}}
-.matrix-col h3{font-size:14px;margin:0 0 12px}
-.mrow{display:grid;grid-template-columns:1fr 90px;gap:10px;align-items:center;padding:6px 0;border-bottom:1px solid var(--grid);font-size:12.5px}
+.matrix-wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:980px){.matrix-wrap{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.matrix-wrap{grid-template-columns:1fr}}
+.matrix-col h3{font-size:13.5px;margin:0 0 12px}
+.mrow{display:grid;grid-template-columns:1fr 82px;gap:8px;align-items:center;padding:6px 0;border-bottom:1px solid var(--grid);font-size:12px}
 .mrow .name{color:var(--ink)}
-.mrow .status{display:flex;align-items:center;justify-content:flex-end;gap:6px;font-weight:600;font-size:11.5px}
+.mrow .status{display:flex;align-items:center;justify-content:flex-end;gap:6px;font-weight:600;font-size:11px}
 .mrow .dot{width:9px;height:9px;border-radius:50%;flex:none}
 /* charts */
 .chart-toolbar{display:flex;justify-content:flex-end;margin-bottom:6px}
@@ -101,85 +101,88 @@ a{color:inherit}
 <body>
 
 <header class="hero">
-  <div class="kick">Trend Asia · Riset Data · Bab 8</div>
-  <h1>Kebijakan Karhutla, Rezim &amp; Dampak</h1>
-  <p>Pemetaan kebijakan karhutla pemerintah 13 tahun terakhir (2013–2026), kebijakan zero-fire 30 grup usaha
-     pemegang PBPH &amp; IUP, dan skala dampak kebakaran hutan dan lahan di Indonesia — bahan riset untuk
-     <i>Indonesia's Fire: A Nation Under Siege By Oligarchy</i>.</p>
+  <div class="kick">Data Publik</div>
+  <h1>Kebijakan Karhutla Indonesia</h1>
+  <p>Pemetaan kebijakan karhutla pemerintah periode 2013 sampai 2026, status kebijakan pencegahan kebakaran
+     di 43 grup usaha pada sektor kehutanan, pertambangan, dan perkebunan sawit, serta data dampak kebakaran
+     hutan dan lahan di Indonesia.</p>
 </header>
 
 <main>
   <div class="stats">
-    <div class="stat"><div class="n">25</div><div class="l">Regulasi diverifikasi, 2013–2026</div></div>
-    <div class="stat"><div class="n">2 / 30</div><div class="l">Grup usaha dgn kebijakan zero-fire kuat</div></div>
-    <div class="stat"><div class="n">10,67 juta</div><div class="l">Jiwa terdampak karhutla, Ags 2026</div></div>
-    <div class="stat"><div class="n">1</div><div class="l">Gap kelembagaan besar era Prabowo-Gibran</div></div>
+    <div class="stat"><div class="n">25</div><div class="l">Regulasi karhutla, 2013 sampai 2026</div></div>
+    <div class="stat"><div class="n">15 / 43</div><div class="l">Grup usaha dengan kebijakan zero-fire kuat</div></div>
+    <div class="stat"><div class="n">10,67 juta</div><div class="l">Jiwa terdampak karhutla, Agustus 2026</div></div>
+    <div class="stat"><div class="n">2</div><div class="l">Kementerian yang menangani karhutla saat ini</div></div>
   </div>
 
   <section id="timeline">
     <div class="sh">
-      <span class="num">8.1</span>
-      <h2>Timeline Regulasi Karhutla per Rezim</h2>
-      <p>25 regulasi dan kebijakan resmi 2013–2026, terverifikasi ke peraturan.go.id, setkab.go.id, bnpb.go.id,
-         dan kehutanan.go.id. Klik untuk saring per era.</p>
+      <h2>Timeline Regulasi Karhutla</h2>
+      <p>25 regulasi dan kebijakan resmi periode 2013 sampai 2026, bersumber dari peraturan.go.id, setkab.go.id,
+         bnpb.go.id, dan kehutanan.go.id. Klik tombol di bawah untuk menyaring per periode pemerintahan.</p>
     </div>
     <div class="card">
       <div class="tl-controls" id="eraFilters"></div>
       <div id="tlList"></div>
       <div class="legend" id="tlLegend"></div>
       <div class="callout">
-        <b>Temuan kunci — era Prabowo-Gibran:</b> perubahan paling signifikan bukan pada aturan teknis karhutla
-        (masih memakai Inpres 3/2020 warisan Jokowi, belum diperbarui), melainkan <b>pemecahan KLHK</b> menjadi
-        Kementerian Kehutanan vs Kementerian Lingkungan Hidup/BPLH (Perpres 139 &amp; 183/2024) — tanpa regulasi baru
-        yang menata ulang koordinasi karhutla lintas dua institusi.
+        <b>Catatan:</b> perubahan institusional terbesar pada periode terakhir bukan pada aturan teknis karhutla,
+        karena Inpres 3/2020 dari periode sebelumnya masih dipakai tanpa pembaruan. Perubahan utamanya adalah
+        pemecahan Kementerian Lingkungan Hidup dan Kehutanan menjadi dua kementerian terpisah lewat Perpres
+        139/2024, dengan Perpres 92/2020 dicabut secara eksplisit oleh Perpres 175/2024. Sampai saat ini belum
+        ada aturan baru yang mengatur pembagian tugas penanganan karhutla di antara dua kementerian tersebut.
       </div>
     </div>
   </section>
 
   <section id="policy">
     <div class="sh">
-      <span class="num">8.2</span>
-      <h2>Kebijakan Zero-Fire Korporasi — 30 Grup Usaha</h2>
-      <p>Status kebijakan pencegahan/mitigasi karhutla di 17 grup PBPH (kehutanan) dan 13 grup IUP (tambang),
-         diurutkan dari yang paling kuat kebijakannya. Sumber: situs resmi korporasi &amp; laporan keberlanjutan.</p>
+      <h2>Kebijakan Pencegahan Karhutla di Sektor Usaha</h2>
+      <p>Status kebijakan pencegahan dan mitigasi karhutla pada 43 grup usaha di tiga sektor: kehutanan (PBPH),
+         pertambangan (IUP), dan perkebunan sawit. Sumber data dari situs resmi perusahaan dan laporan
+         keberlanjutan masing-masing.</p>
     </div>
     <div class="card">
       <div class="matrix-wrap">
         <div class="matrix-col">
-          <h3>PBPH — Kehutanan (17 grup)</h3>
+          <h3>Kehutanan / PBPH (17 grup)</h3>
           <div id="pbphMatrix"></div>
         </div>
         <div class="matrix-col">
-          <h3>IUP — Pertambangan (13 grup)</h3>
+          <h3>Pertambangan / IUP (13 grup)</h3>
           <div id="iupMatrix"></div>
+        </div>
+        <div class="matrix-col">
+          <h3>Perkebunan Sawit (13 grup)</h3>
+          <div id="sawitMatrix"></div>
         </div>
       </div>
       <div class="legend">
-        <span><i style="background:var(--good)"></i>Ya — kebijakan kuat &amp; terdokumentasi</span>
-        <span><i style="background:var(--warning)"></i>Sebagian — bukti terbatas</span>
+        <span><i style="background:var(--good)"></i>Ya, kebijakan terdokumentasi jelas</span>
+        <span><i style="background:var(--warning)"></i>Sebagian, bukti terbatas</span>
         <span><i style="background:var(--critical)"></i>Tidak ditemukan</span>
       </div>
       <div class="callout">
-        <b>Sorotan:</b> Nusantara Energy Group (diduga terkait Prabowo Subianto) — grup dengan eksposur hotspot
-        terbesar kedua di sektor PBPH — tidak memiliki satu pun jejak situs resmi berisi kebijakan lingkungan
-        atau kebakaran.
+        <b>Catatan:</b> kebijakan pencegahan kebakaran paling banyak ditemukan di sektor sawit (10 dari 13 grup),
+        diikuti pertambangan (3 dari 13 grup) dan kehutanan (2 dari 17 grup). Pola ini sejalan dengan pengaruh
+        sertifikasi pasar internasional seperti RSPO dan kebijakan NDPE yang menyasar komoditas sawit untuk
+        pasar ekspor.
       </div>
     </div>
   </section>
 
   <section id="impact">
     <div class="sh">
-      <span class="num">8.3</span>
       <h2>Skala Dampak Karhutla</h2>
-      <p>Sumber: SiPongi+/Kementerian Kehutanan, BNPB, Kemenkes. Area abu-abu menandai data yang tidak
-         ditemukan dari sumber resmi.</p>
+      <p>Sumber: SiPongi (Kementerian Kehutanan), BNPB, dan Kementerian Kesehatan.</p>
     </div>
     <div class="card">
       <div class="chart-toolbar">
         <button class="tbtn on" data-view="chart" data-target="area">Grafik</button>
         <button class="tbtn" data-view="table" data-target="area">Tabel</button>
       </div>
-      <h3 style="margin:0 0 10px;font-size:14px">Luas area terbakar, 2015–2026 (hektare)</h3>
+      <h3 style="margin:0 0 10px;font-size:14px">Luas area terbakar, 2015 sampai 2026 (hektare)</h3>
       <div id="areaChart"></div>
       <div id="areaTable" hidden></div>
     </div>
@@ -188,27 +191,27 @@ a{color:inherit}
         <button class="tbtn on" data-view="chart" data-target="emisi">Grafik</button>
         <button class="tbtn" data-view="table" data-target="emisi">Tabel</button>
       </div>
-      <h3 style="margin:0 0 10px;font-size:14px">Emisi CO₂ dari karhutla, 2018–2025 (ton CO₂e)</h3>
+      <h3 style="margin:0 0 10px;font-size:14px">Emisi CO2 dari karhutla, 2018 sampai 2025 (ton CO2e)</h3>
       <div id="emisiChart"></div>
       <div id="emisiTable" hidden></div>
     </div>
     <div class="card">
-      <h3 style="margin:0 0 14px;font-size:14px">Sorotan tahun berjalan — 2026 (Jan–Ags)</h3>
+      <h3 style="margin:0 0 14px;font-size:14px">Data tahun berjalan, Januari sampai Agustus 2026</h3>
       <div class="stats" style="margin-top:0">
-        <div class="stat"><div class="n">10,67 juta</div><div class="l">Jiwa terdampak (7 provinsi)</div></div>
-        <div class="stat"><div class="n">13.449</div><div class="l">Kasus ISPA kumulatif, 63 kab/kota</div></div>
-        <div class="stat"><div class="n">202.011 ha</div><div class="l">Area terbakar (kolom terbaru SiPongi)</div></div>
-        <div class="stat"><div class="n">72</div><div class="l">Tersangka ditangkap, 9 polda</div></div>
+        <div class="stat"><div class="n">10,67 juta</div><div class="l">Jiwa terdampak di 7 provinsi</div></div>
+        <div class="stat"><div class="n">13.449</div><div class="l">Kasus ISPA kumulatif, 63 kabupaten/kota</div></div>
+        <div class="stat"><div class="n">202.011 ha</div><div class="l">Area terbakar, kolom data terbaru SiPongi</div></div>
+        <div class="stat"><div class="n">72</div><div class="l">Tersangka ditangkap di 9 polda</div></div>
       </div>
     </div>
   </section>
 </main>
 
 <footer>
-  <p><b>Metodologi:</b> seluruh data bersumber dari situs resmi pemerintah dan korporasi, diverifikasi langsung
-     (bukan dari media pihak ketiga). Detail lengkap termasuk kutipan sumber &amp; nomor halaman dokumen PDF
-     tersedia di file Excel dan Word pendamping riset ini.</p>
-  <p>Trend Asia · Riset Data — Bab 8, <i>Indonesia's Fire: A Nation Under Siege By Oligarchy</i></p>
+  <p><b>Metodologi:</b> seluruh data bersumber dari situs resmi pemerintah dan korporasi, dan diverifikasi
+     langsung ke halaman aslinya, bukan dari pemberitaan media. Data direvisi mengikuti proses verifikasi
+     ulang pada awal September 2026.</p>
+  <p>Sumber: Trend Asia</p>
 </footer>
 
 <div class="tt" id="tt"></div>
@@ -218,24 +221,24 @@ const ERA_COLOR = { "SBY":"var(--era-sby)", "Jokowi":"var(--era-jokowi)", "Prabo
 const ERA_ORDER = ["SBY","Jokowi","Prabowo-Gibran"];
 
 const TIMELINE = [
- {y:2001,era:"SBY",t:"PP No. 4/2001 — Pengendalian Kerusakan/Pencemaran LH akibat Karhutla",note:"Payung hukum karhutla tertua yang masih dirujuk sepanjang 2013–2026.",url:"https://peraturan.go.id/id/pp-no-4-tahun-2001"},
- {y:2009,era:"SBY",t:"UU No. 32/2009 — Perlindungan dan Pengelolaan Lingkungan Hidup",note:"UU induk PPLH; dasar strict liability korporasi atas kerusakan lingkungan akibat karhutla.",url:"https://peraturan.go.id/id/uu-no-32-tahun-2009"},
- {y:2013,era:"SBY",t:"Inpres No. 6/2013 — Moratorium Hutan Alam Primer &amp; Gambut",note:"Perpanjangan moratorium 2-tahunan, mendahului moratorium permanen era Jokowi.",url:"https://peraturan.go.id/id/inpres-no-6-tahun-2013"},
- {y:2015,era:"Jokowi",t:"Inpres No. 11/2015 — Peningkatan Pengendalian Karhutla",note:"Respons langsung krisis kabut asap 2015.",url:"https://peraturan.bpk.go.id/Home/Details/77379/inpres-no-11-tahun-2015"},
- {y:2016,era:"Jokowi",t:"Perpres No. 1/2016 — Badan Restorasi Gambut (BRG)",note:"Lembaga non-struktural restorasi ~2 juta ha gambut di 7 provinsi prioritas.",url:"https://peraturan.go.id/id/perpres-no-1-tahun-2016"},
- {y:2016,era:"Jokowi",t:"Permen LHK P.32/2016 — Pengendalian Karhutla",note:"Pedoman teknis dalkarhutla, termasuk operasional Manggala Agni.",url:"https://peraturan.go.id/id/permenlh-no-p-32-menlhk-setjen-kum-1-3-2016-tahun-2016"},
- {y:2020,era:"Jokowi",t:"Inpres No. 3/2020 — Penanggulangan Karhutla",note:"Masih jadi payung hukum aktif hingga 2026, meski KLHK yang dirujuk sudah tidak ada.",url:"https://peraturan.bpk.go.id/Details/133045/inpres-no-3-tahun-2020"},
- {y:2020,era:"Jokowi",t:"Perpres No. 92/2020 — Kementerian LHK",note:"Dasar hukum KLHK gabungan, bertahan hingga dipecah era Prabowo-Gibran.",url:"https://peraturan.go.id/id/perpres-no-92-tahun-2020"},
- {y:2020,era:"Jokowi",t:"Perpres No. 120/2020 — Badan Restorasi Gambut dan Mangrove",note:"Perluasan BRG menjadi BRGM.",url:"https://peraturan.go.id/id/perpres-no-120-tahun-2020"},
- {y:2020,era:"Jokowi",t:"UU No. 11/2020 — Cipta Kerja (klaster LH &amp; Kehutanan)",note:"Ubah pendekatan sanksi karhutla; substansi pasal spesifik belum terverifikasi penuh.",url:"https://peraturan.go.id/id/uu-no-11-tahun-2020"},
- {y:2021,era:"Jokowi",t:"PP No. 22/2021 &amp; PP No. 23/2021 — Penyelenggaraan PPLH &amp; Kehutanan",note:"Peraturan pelaksana UU Cipta Kerja pasca-perubahan.",url:"https://peraturan.go.id/id/pp-no-22-tahun-2021"},
- {y:2021,era:"Jokowi",t:"Permen LHK No. 28/2021 — Sekat Bakar",note:"Ketentuan teknis firebreak di lahan gambut.",url:"https://peraturan.go.id/id/permen-lhk-no-28-tahun-2021"},
- {y:2024,era:"Jokowi",t:"Permen LHK No. 14/2024 — Sanksi Administratif LH",note:"Kerangka sanksi terakhir KLHK gabungan sebelum dipecah.",url:"https://peraturan.go.id/id/permen-lhk-no-14-tahun-2024"},
- {y:2024,era:"Prabowo-Gibran",t:"Perpres No. 139 &amp; 183/2024 — Pemecahan KLHK",note:"KLHK dipecah jadi Kementerian Kehutanan vs Kementerian LH/BPLH — gap koordinasi karhutla lintas institusi.",url:"https://peraturan.go.id/id/perpres-no-139-tahun-2024"},
- {y:2024,era:"Prabowo-Gibran",t:"Permenhut No. 1/2024 — Organisasi Kementerian Kehutanan",note:"Dalkarhut &amp; sipongi tetap di Kementerian Kehutanan baru.",url:"https://peraturan.go.id/id/permenhut-no-1-tahun-2024"},
- {y:2025,era:"Prabowo-Gibran",t:"Seri Permenklhbph 2025–2026",note:"Regulasi teknis aktif diterbitkan, namun belum satupun spesifik karhutla.",url:"https://peraturan.go.id/id/permenklhbph-no-20-tahun-2025"},
- {y:2025,era:"Prabowo-Gibran",t:"Arahan Presiden — Rapat Hambalang (Agustus 2025)",note:"Masih arahan rapat, bukan instrumen hukum baru.",url:"https://setkab.go.id/pimpin-rapat-dari-hambalang-presiden-prabowo-bahas-pencegahan-kebakaran-hutan-dan-lahan/"},
- {y:2026,era:"Prabowo-Gibran",t:"PP No. 8/2026 — Perubahan PP No. 23/2021 (Kehutanan)",note:"Regulasi kehutanan terbaru; substansi perubahan belum diverifikasi — prioritas tindak lanjut.",url:"https://peraturan.go.id/id/pp-no-8-tahun-2026"},
+ {y:2001,era:"SBY",t:"PP No. 4/2001, Pengendalian Kerusakan dan Pencemaran LH akibat Karhutla",note:"Payung hukum karhutla tertua yang masih dirujuk sepanjang 2013 sampai 2026.",url:"https://peraturan.go.id/id/pp-no-4-tahun-2001"},
+ {y:2009,era:"SBY",t:"UU No. 32/2009, Perlindungan dan Pengelolaan Lingkungan Hidup",note:"UU induk PPLH, dasar strict liability korporasi atas kerusakan lingkungan akibat karhutla.",url:"https://peraturan.go.id/id/uu-no-32-tahun-2009"},
+ {y:2013,era:"SBY",t:"Inpres No. 6/2013, Moratorium Hutan Alam Primer dan Gambut",note:"Perpanjangan moratorium 2 tahunan, mendahului moratorium permanen di periode berikutnya.",url:"https://peraturan.go.id/id/inpres-no-6-tahun-2013"},
+ {y:2015,era:"Jokowi",t:"Inpres No. 11/2015, Peningkatan Pengendalian Karhutla",note:"Respons langsung atas krisis kabut asap 2015.",url:"https://peraturan.bpk.go.id/Home/Details/77379/inpres-no-11-tahun-2015"},
+ {y:2016,era:"Jokowi",t:"Perpres No. 1/2016, Badan Restorasi Gambut (BRG)",note:"Lembaga non-struktural untuk restorasi sekitar 2 juta hektare gambut di 7 provinsi prioritas.",url:"https://peraturan.go.id/id/perpres-no-1-tahun-2016"},
+ {y:2016,era:"Jokowi",t:"Permen LHK P.32/2016, Pengendalian Karhutla",note:"Pedoman teknis pengendalian karhutla, termasuk operasional Manggala Agni.",url:"https://peraturan.go.id/id/permenlh-no-p-32-menlhk-setjen-kum-1-3-2016-tahun-2016"},
+ {y:2020,era:"Jokowi",t:"Inpres No. 3/2020, Penanggulangan Karhutla",note:"Masih menjadi payung hukum aktif hingga 2026, meski struktur kementerian yang dirujuk sudah tidak ada.",url:"https://peraturan.bpk.go.id/Details/133045/inpres-no-3-tahun-2020"},
+ {y:2020,era:"Jokowi",t:"Perpres No. 92/2020, Kementerian Lingkungan Hidup dan Kehutanan",note:"Dasar hukum KLHK sebagai kementerian gabungan. Dicabut oleh Perpres 175/2024 saat kementerian ini dipecah kembali.",url:"https://peraturan.go.id/id/perpres-no-92-tahun-2020"},
+ {y:2020,era:"Jokowi",t:"Perpres No. 120/2020, Badan Restorasi Gambut dan Mangrove",note:"Perluasan mandat BRG menjadi BRGM.",url:"https://peraturan.go.id/id/perpres-no-120-tahun-2020"},
+ {y:2020,era:"Jokowi",t:"UU No. 11/2020, Cipta Kerja (klaster lingkungan hidup dan kehutanan)",note:"Mengubah pendekatan sanksi karhutla, substansi pasal spesifik belum terverifikasi penuh.",url:"https://peraturan.go.id/id/uu-no-11-tahun-2020"},
+ {y:2021,era:"Jokowi",t:"PP No. 22/2021 dan PP No. 23/2021, Penyelenggaraan PPLH dan Kehutanan",note:"Peraturan pelaksana UU Cipta Kerja setelah perubahan.",url:"https://peraturan.go.id/id/pp-no-22-tahun-2021"},
+ {y:2021,era:"Jokowi",t:"Permen LHK No. 28/2021, Sekat Bakar",note:"Ketentuan teknis pembangunan sekat bakar di lahan gambut.",url:"https://peraturan.go.id/id/permen-lhk-no-28-tahun-2021"},
+ {y:2024,era:"Jokowi",t:"Permen LHK No. 14/2024, Sanksi Administratif Lingkungan Hidup",note:"Kerangka sanksi terakhir yang diterbitkan sebelum kementerian ini dipecah.",url:"https://peraturan.go.id/id/permen-lhk-no-14-tahun-2024"},
+ {y:2024,era:"Prabowo-Gibran",t:"Perpres No. 139/2024, Penataan Kementerian",note:"Memecah Kementerian Lingkungan Hidup dan Kehutanan menjadi Kementerian Kehutanan dan Kementerian Lingkungan Hidup/BPLH.",url:"https://peraturan.go.id/id/perpres-no-139-tahun-2024"},
+ {y:2024,era:"Prabowo-Gibran",t:"Permenhut No. 1/2024, Organisasi Kementerian Kehutanan",note:"Pengendalian karhutla dan sistem pemantauan titik panas tetap berada di Kementerian Kehutanan.",url:"https://peraturan.go.id/id/permenhut-no-1-tahun-2024"},
+ {y:2025,era:"Prabowo-Gibran",t:"Seri Permenklhbph 2025 sampai 2026",note:"Sejumlah regulasi teknis diterbitkan, namun belum ada yang secara khusus mengatur karhutla.",url:"https://peraturan.go.id/id/permenklhbph-no-20-tahun-2025"},
+ {y:2025,era:"Prabowo-Gibran",t:"Rapat Pencegahan Karhutla di Hambalang, Agustus 2025",note:"Arahan presiden yang bersifat rapat koordinasi, bukan instrumen hukum baru.",url:"https://setkab.go.id/pimpin-rapat-dari-hambalang-presiden-prabowo-bahas-pencegahan-kebakaran-hutan-dan-lahan/"},
+ {y:2026,era:"Prabowo-Gibran",t:"PP No. 8/2026, Perubahan atas PP No. 23/2021 tentang Kehutanan",note:"Regulasi kehutanan terbaru, substansi perubahannya belum sepenuhnya diverifikasi.",url:"https://peraturan.go.id/id/pp-no-8-tahun-2026"},
 ];
 
 const PBPH = [
@@ -255,22 +258,37 @@ const PBPH = [
  {n:"MASA Group (Multistrada)",s:"Tidak"},
  {n:"CBI Group",s:"Tidak"},
  {n:"Baramulti Group",s:"Tidak"},
- {n:"Jhonlin Group (Haji Isam)",s:"Tidak"},
+ {n:"Jhonlin Group",s:"Tidak"},
 ];
 const IUP = [
  {n:"Cita Mineral / Harita Group",s:"Ya"},
- {n:"Vale Indonesia (INCO)",s:"Ya"},
+ {n:"Vale Indonesia",s:"Ya"},
  {n:"Berau Coal Energy",s:"Ya"},
- {n:"Aneka Tambang (ANTM)",s:"Sebagian"},
- {n:"Timah Tbk (TINS)",s:"Sebagian"},
- {n:"Bumi Resources (BUMI)",s:"Tidak"},
- {n:"Indika Energy (INDY)",s:"Tidak"},
+ {n:"Aneka Tambang (Antam)",s:"Sebagian"},
+ {n:"Timah Tbk",s:"Sebagian"},
+ {n:"Bumi Resources",s:"Tidak"},
+ {n:"Indika Energy",s:"Tidak"},
  {n:"Jinchuan Group",s:"Tidak"},
  {n:"Tianshan Aluminum Group",s:"Tidak"},
  {n:"East Hope Group",s:"Tidak"},
- {n:"PT Perusahaan Perdagangan Indonesia",s:"Tidak"},
+ {n:"Perusahaan Perdagangan Indonesia",s:"Tidak"},
  {n:"Putra Mining / Kalindo Group",s:"Tidak"},
- {n:"Qinfa Group Ltd",s:"Tidak"},
+ {n:"Qinfa Group",s:"Tidak"},
+];
+const SAWIT = [
+ {n:"Golden Agri-Resources / SMART",s:"Ya"},
+ {n:"Wilmar International",s:"Ya"},
+ {n:"Musim Mas Group",s:"Ya"},
+ {n:"Astra Agro Lestari",s:"Ya"},
+ {n:"Asian Agri / RGE",s:"Ya"},
+ {n:"First Resources",s:"Ya"},
+ {n:"Salim Group / Indofood Agri",s:"Ya"},
+ {n:"Provident Agro",s:"Ya"},
+ {n:"Makin Group / FAP Agri",s:"Ya"},
+ {n:"Best Agro International",s:"Ya"},
+ {n:"Bumitama Agri",s:"Sebagian"},
+ {n:"Triputra Agro Persada",s:"Sebagian"},
+ {n:"Dharma Satya Nusantara",s:"Sebagian"},
 ];
 
 const AREA = [
@@ -295,7 +313,7 @@ function renderLegend(){
   lg.innerHTML = ERA_ORDER.map(e=>`<span><i style="background:${ERA_COLOR[e]}"></i>${e}</span>`).join("");
 }
 function renderFilters(){
-  const all = [{k:"all",label:"Semua era"}, ...ERA_ORDER.map(e=>({k:e,label:e}))];
+  const all = [{k:"all",label:"Semua periode"}, ...ERA_ORDER.map(e=>({k:e,label:e}))];
   eraFilters.innerHTML = all.map(f=>`<button class="tl-btn ${f.k===activeEra?'on':''}" data-era="${f.k}">${f.label}</button>`).join("");
   eraFilters.querySelectorAll("button").forEach(b=>{
     b.addEventListener("click",()=>{ activeEra=b.dataset.era; renderFilters(); renderTimeline(); });
@@ -309,7 +327,7 @@ function renderTimeline(){
       <div class="tl-body">
         <span class="badge" style="background:${ERA_COLOR[d.era]}">${d.era}</span>
         <b>${d.t}</b>
-        <div class="meta"><a class="src-link" href="${d.url}" target="_blank" rel="noopener">sumber resmi ↗</a></div>
+        <div class="meta"><a class="src-link" href="${d.url}" target="_blank" rel="noopener">sumber resmi</a></div>
         <p>${d.note}</p>
       </div>
     </div>`).join("");
@@ -326,6 +344,7 @@ function renderMatrix(el, data){
 }
 renderMatrix(document.getElementById("pbphMatrix"), PBPH);
 renderMatrix(document.getElementById("iupMatrix"), IUP);
+renderMatrix(document.getElementById("sawitMatrix"), SAWIT);
 
 // ---- Line chart (generic) ----
 const tt = document.getElementById("tt");
@@ -373,12 +392,12 @@ function tableView(containerId, rows, colLabel, fmt){
 }
 
 const fmtHa = v => Math.round(v).toLocaleString("id-ID")+" ha";
-const fmtTon = v => Math.round(v).toLocaleString("id-ID")+" t CO₂e";
+const fmtTon = v => Math.round(v).toLocaleString("id-ID")+" t CO2e";
 
-lineChart("areaChart", AREA, {fmt:v=>Math.round(v/1000)+"rb", note:"* Data 2026 = kolom terbaru SiPongi (s.d. ~Agustus); ada versi lain Jan–Jun (107.465 ha) di halaman resmi yang sama."});
+lineChart("areaChart", AREA, {fmt:v=>Math.round(v/1000)+"rb", note:"Catatan: angka 2026 diambil dari kolom data terbaru SiPongi, kira kira sampai Agustus. Ada versi lain untuk periode Januari sampai Juni sebesar 107.465 hektare pada halaman resmi yang sama."});
 tableView("areaTable", AREA, "Luas (ha)", fmtHa);
 lineChart("emisiChart", EMISI, {fmt:v=>Math.round(v/1e6)+"jt"});
-tableView("emisiTable", EMISI, "Emisi (ton CO₂e)", fmtTon);
+tableView("emisiTable", EMISI, "Emisi (ton CO2e)", fmtTon);
 
 document.querySelectorAll(".tbtn").forEach(b=>{
   b.addEventListener("click", ()=>{
